@@ -246,9 +246,6 @@ span.pst:hover {
 	transform:scale(1,1);
 	transition:0.5s all;
 }
-.caption h3{
-	
-}
 .caption p{
 	line-height: 1.8em;
 	padding-bottom: 20px;
@@ -647,7 +644,7 @@ section#tables {
 	width:36px;
 	height:50px;
 	display:inline-block;
-	float: left;
+	float: none;
 	margin-right: 15px;
 	margin-top: 5px;
 	background-size: 109px;
@@ -1368,4 +1365,5 @@ div.panel.show{
 	input[type="text"] {
 		width: 100%;
 	}
+}
 }
