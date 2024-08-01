@@ -724,6 +724,8 @@ li.text-ul h4 {
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
+	justify-content: space-around;
+	display: flex;
 }
 .navbar-collapse.collapse {
     display: none!important;
@@ -731,6 +733,7 @@ li.text-ul h4 {
 .navbar-nav {
     float: none!important;
     margin-top: 7.5px;
+	
 }
 .navbar-nav>li {
     float: none;
