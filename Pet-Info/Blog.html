@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kawaii.Peto-Info</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<!--fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<body>   
+
+    <div class="clearfix"></div>
+                    <div class style="background-color: #FFC0CB">
+                        <h1><a href="index.html" class style="color:#FF1493">KLIK HERE<span class="hlf" class style="color:#FF69B4"> TO GO BACK</span></a>
+                    </div>
+                </div>
+    <div class="container">
+        <h1>Tell Your Story</h1>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-flat">
+                    <form id="preview">
+                        <div class="field">
+                            <label class="label">Title ID</label>
+                            <div class="control">
+                                <input id="titleId" class="input" placeholder="1" type="number" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Title</label>
+                            <div class="control">
+                                <input id="title" class="input" placeholder="Title" type="text" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Image</label>
+                            <div class="control">
+                                <input id="url" class="input" type="text" placeholder="Image URL" required autocomplete="off">
+                            </div>
+                        <div class="field">
+                            <label class="label">Content</label>
+                            <div class="control">
+                                <textarea class="textarea" id="content" placeholder="Description goes here"></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary" type="submit">
+                                            Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="column">
+                    <center>
+                        <h1 style="color:brown">All The Posts</h1>
+                    </center>
+                    <div id="list-of-posts">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script> 
+     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>Kawaii.Peto-Info</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!meta charset utf="8">
+		<!--bootstrap-->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!-- css-->
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<!-- css-- <link href="css/owl.carousel.css" rel="stylesheet"> !-- css-->
+		<!--script-->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Script--<script src="js/owl.carousel.js"></script> !-- Script-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!--script-->
+		<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyCSoGwDYrQetHRAzqMnXSmhCQnq8EPhwNA",
+  authDomain: "blogpets-071299.firebaseapp.com",
+  databaseURL: "https://blogpets-071299.firebaseio.com",
+  projectId: "blogpets-071299",
+  storageBucket: "blogpets-071299.appspot.com",
+  messagingSenderId: "452893215818",
+  appId: "1:452893215818:web:eab2dbfd4902b8f24eeab3",
+  measurementId: "G-R3JQWS0XT1"
+};
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+//      firebase.analytics();
+    </script>
+    <style type="text/css">
+      .form-control .form-control-user{
+        box-sizing : border-box;
+        width: 100%;
+        padding: 10px;
+        font-size: 11pt;
+        margin-bottom: 20px;
+      }
+      .form-group , .form-control .form-control-user{
+        width: 100%;
+      }
+    </style>
+</head>
+<body>
+   			<!-- Page Heading -->
+	  <div class="kotak_login" style="width: 350px; background: #FFDAB9; margin: 80px auto; padding: 30px 20px;">
+          <h1 class="h3 mb-4 text-gray-800" style="text-align: center; color: #FA8072;">Login</h1>
+          
+          <form class="user">
+            
+            <div class="form-group">
+                    <label>E-Mail</label>
+                    <input type="email" class="form-control form-control-user" id="email" placeholder=""
+                    style="width: 100%;">
+            </div>
+            <br/>
+              
+              <div class="form-group">
+                    <label>Password:</label><br/>
+                    <input type="password" class="form-control form-control-user" id="password" placeholder=""
+                    style="width: 100%;">
+            </div>
+              
+            <hr>
+            <button type="button" class="btn btn-primary" onclick="signUp()">
+                Sign Up
+            </button>
+            <button type="button" class="btn btn-primary" onclick="signIn()">
+                Sign In
+            </button>
+            <button type="button" class="btn btn-primary" onclick="signOut()">
+                Sign Out
+            </button>
+          </form>
+        </div>
+        
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="admin/vendor/jquery/jquery.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="admin/js/sb-admin-2.min.js"></script>
+  <script>
+      
+      const auth = firebase.auth();
+      
+      function signUp() {
+          
+          var email = document.getElementById("email");
+          var password = document.getElementById("password");
+          
+          const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+          promise.catch(e => alert(e.message));
+          
+          alert("Signed Up");
+      }
+      
+      function signIn() {
+          
+          var email = document.getElementById("email");
+          var password = document.getElementById("password");
+          
+          const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+          promise.catch(e => alert(e.message));
+          
+//          take user to a different pages or home page
+        window.location.href = "user.html";
+
+      }
+      
+      function signOut(){
+          auth.signOut();
+          alert("Signed Out");
+      }
+      
+      auth.onAuthStateChanged(function(user) {
+          
+         if (user) {
+            
+            var email = user.email;
+            alert("Active User " + email);
+            
+//            is signed in
+    
+        } else {
+            
+            alert("No Active User");
+            
+//            no user is signed in
+            
+        }
+          
+      });
+  </script>
+    <!---->
+</body>
+</html>

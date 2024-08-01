@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Kawaii.Peto-Info</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!meta charset utf="8">
+		<!--bootstrap-->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!--coustom css-->
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<!--script-->
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!--script-->
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!--header-part-->
+		<div class="banner-background">
+			<div class="container">
+				<div class="nav-back">
+					<div class="navigation">
+						<nav class="navbar navbar-default">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="index.html">HOME <span class="sr-only">(current)</span></a></li>
+									<li><a href="gallery.html">GALLERY</a></li>
+									<li class="dropdown">
+									  <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PET<span class="caret"></span></a>
+									  <ul class="dropdown-menu">
+										<li><a href="dog.html">DOG</a></li>
+										<li><a href="cat.html">CAT</a></li>
+										<li><a href="rodent.html">RODENT</a></li>
+									  </ul>
+									</li>
+									<li><a href="education.html">EDUCATION</a></li>
+									<li><a href="form.html">FORM</a></li>
+									<li><a href="contact.html" class="active">CONTACT</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+								<div class="clearfix"></div>	
+							<div class="clearfix"></div>
+						</nav>
+						<div class="clearfix"></div>
+					</div>
+					<div class="logo">
+						<h1><a href="index.html">KAWAII<span class="hlf"> PETO.SHOPU</span></a></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--header-->
+		<!--about-->
+			<div class="about-pg">
+			<h3>About us</h3>
+			<div class="container">
+					<div class="col-md-6 lt">
+						<div class="choose-us">
+							<h3>Why choose us?</h3>
+							<ul>
+								<li class="text-ul">
+									<span class="one"></span>
+									<div class="folt">
+									<h4>EDUCATION</h4>
+									<p>Provide information and education that is very useful </p>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+								<li class="text-ul">
+									<span class="two"></span>
+									<div class="folt">
+									<h4>LOVE</h4>
+									<p>Trying to provide the best for their You,Members and Pets</p>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+								<li class="text-ul">
+									<span class="three"></span>
+									<div class="folt">
+									<h4>SHARE&CARE</h4>
+									<p>Invites You,Volunteers and Donations to share and care for the environment</p>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+							</ul>
+						<div class="clear"></div>
+						</div>
+					</div>
+					<div class="col-md-6 lt">
+						<div class="few-words">
+							<h3>A few words about us.</h3>
+								<div class="few-text">
+									<img src="./images/head.jpg" alt="" title="" class="img-responsive" />
+									<div class="flt">
+									<h4>Why choose to join Us?</h4>
+									<p>Kawaii Peto Shopu provides a variety of services and information that is very useful for your pet.</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+						</div>
+					</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+				<div class="clearfix"></div>
+			</div>    
+		</div>
+		</div>
+		<!--about-->
+		<!--contact-->
+			<div class="contact-page">
+				<h3>CONTACT</h3>
+				<div class="container">
+					<!-- Maps Location-->
+            	<script>
+function initialize() {
+  var propertiPeta = {
+    center:new google.maps.LatLng(-6.362049, 106.824982),
+    zoom:9,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+  var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+  
+  // membuat Marker
+  var marker=new google.maps.Marker({
+      position: new google.maps.LatLng(-6.362049, 106.824982),
+      map: peta
+  });
+
+}
+
+// event jendela di-load  
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+ <div id="googleMap" style="width:100%;height:380px;"></div>
+ 
+                </div>
+            </div>
+            	<div class="container">
+          		<div class="col-md-6 lt">
+						<div class="few-words">
+							<h3>FIND US.</h3>
+								<div class="few-text">
+									<div class="flt">
+									<h4>ADDRESS</h4>
+									<p> Galaxy Street,Milky Way </p>
+									<br/>
+									<h4>CONTACT INFO</h4>
+                        			<span>TAX : 0211313113</span><br/>
+                        			<span>Email &nbsp;: Kawaii.petto@gmail.com&nbsp;</span>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+						</div>
+					<div class="container">
+                  <div class="col-md-8 lt">
+					<div class="our-team">
+						<div class="col-md-3 txt">
+							<img src="./images/dinda.jpg" alt="" title="" class="img-responsive" />
+								<h4>Dinda</h4>
+							<p>Contact Me @Dindaskra.</p>
+						</div>
+						<div class="col-md-3 txt">
+							<img src="./images/via.png" alt="" title="" class="img-responsive" />
+								  <h4>Via Tree Amay</h4>
+							<p>Contact Me @Viatree</p>
+						</div>
+            	</div>
+                </div>
+                </div>
+						</div>
+						</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div> 
+    <script type="text/javascript">
+    function submit(){
+      var name = document.getElementById('nama2').value;
+      var mail = document.getElementById('email2').value;
+      var checked = document.getElementById('ok').checked;
+      var textarea = document.getElementById('message').value;
+      
+
+      if (name == "" || mail == "" || checked == "" || textarea == "" ) {
+        window.alert("Please complete the data"); 
+      }
+      else {
+        window.alert("Thank You for the Feedback ! We will inform via email.");
+      }
+    }
+    </script>
+						</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		<!--contact-->
+		<!--footer-->
+			 <footer class="footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3 >ADDRESS</h3>
+                        <span>Galaxy Street,</span><br/>
+                        <span>Milky Way</span>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>COPY RIGHT&nbsp;</h3>
+                        <span>©2020, Kawaii Peto-Shopu</span><br/>
+                            <span>@Dindaskra &amp; @Viatree</span>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>CONTACT INFO</h3>
+                        <span>Phone : 0898998989</span><br/>
+                        <span>Email &nbsp;: Kawaii.pet@gmail.com&nbsp;</span>
+                    </div>
+                    <div class="col-lg-3 item social"><img src="images/4.png"></div>
+                </div>
+            </div>
+        </footer>
+		<!--footer-->
+		<!---->
+		<script type="text/javascript">
+				$(document).ready(function() {
+						/*
+						var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear' 
+						};
+						*/
+				$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+		</script>
+		<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		<!----> 
+	</body>
+</html>
